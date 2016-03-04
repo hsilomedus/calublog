@@ -1,0 +1,20 @@
+<html>
+<head><title>SpringBoot blog</title></head>
+<body>
+
+<h1>
+Blog!
+</h1>
+
+<div th:each="post : ${posts}">
+    <h2 th:text="${post.title}">1</h2>
+    <h2 th:text="${post.creator.name}">1</h2>
+    <p th:text="${post.text}">Text ...</p>
+    <a th:href="@{/edit(id=${post.id})}">Edit...</a>
+</div>
+
+
+<div><a href="/new">Create new blogpost...</a></div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head><title>SpringBoot blog</title></head>
+<body>
+
+<h1>
+Edit!
+</h1>
+
+
+<form th:action="@{/edit}" th:object="${post}" method="post">
+<input type="hidden" id="id" name="id"  th:field="*{id}" />
+<input type="hidden" id="creator" name="creator"  th:field="*{creator}" />
+<div>Title: <input type="text" id="title" name="title"  th:field="*{title}" /></div>
+<div>Content <br/><textarea id="text" name="text" th:field="*{text}"></textarea></div>
+<input type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>
